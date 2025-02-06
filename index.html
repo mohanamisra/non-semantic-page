@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Non-Semantic Page</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .container { width: 80%; margin: auto; }
-        .nav, .header, .content, .sidebar, .footer { padding: 20px; border: 1px solid black; margin: 10px 0; }
-        .btn { display: inline-block; padding: 10px; background: blue; color: white; cursor: pointer; }
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 80%; display: flex; flex-direction: column; }
+        .header, .footer, .nav, .content, .sidebar { padding: 20px; border: 1px solid black; margin: 10px 0; }
+        .layout { display: flex; }
+        .content { flex: 3; }
+        .sidebar { flex: 1; background: #f4f4f4; }
+        .btn { display: inline-block; padding: 10px; background: blue; color: white; cursor: pointer; margin-right: 10px; }
         .scroll { height: 300px; overflow-y: scroll; border: 1px solid gray; padding: 10px; }
         .image { display: block; width: 100%; max-width: 600px; }
     </style>
@@ -22,13 +25,15 @@
             <div class="btn">Services</div>
             <div class="btn">Contact</div>
         </div>
-        <div class="content">
-            <div class="title">Main Content</div>
-            <div class="text">This is some important text.</div>
-            <div class="scroll">Long scrolling content...<br>More text...<br>Even more text...</div>
-            <div><img src="https://placehold.co/600x400"></div>
+        <div class="layout">
+            <div class="content">
+                <div class="title">Main Content</div>
+                <div class="text">This is some important text.</div>
+                <div class="scroll">Long scrolling content...<br>More text...<br>Even more text...</div>
+                <div><img src="https://placehold.co/600x400"></div>
+            </div>
+            <div class="sidebar">Sidebar with extra links and widgets</div>
         </div>
-        <div class="sidebar">Sidebar with extra links and widgets</div>
         <div class="footer">Footer Information with links</div>
     </div>
 </body>
